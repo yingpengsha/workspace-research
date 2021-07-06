@@ -4,10 +4,24 @@
 
 ## Initialize
 
-将会在根项目的 `node_modules` 下生成所有 workspace 的软链接依赖。
+### package.json
+
+在 package.json 配置 `workspaces` 字段
+
+```text
+{
+  ...
+  "workspaces": [
+    "./packages/*"
+  ],
+  ...
+}
+```
+
+### npm install
 
 ```bash
-npm install
+npm install # 将会在根项目的 `node_modules` 下生成所有 workspace 的软链接依赖。
 ```
 
 ## Add Dependencies
@@ -15,7 +29,8 @@ npm install
 ### To the root project
 
 ```bash
-npm install express # 在 root-project 中执行
+npm install express # 在根项目中执行
+npm install @test/bundler # 添加子项目为依赖，最终在 package.json 中呈现的版本号为 'file:path/to/sub-workspaces'
 ```
 
 ### To the workspace
