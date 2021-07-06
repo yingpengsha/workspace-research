@@ -1,0 +1,6 @@
+{
+  "private": "true",
+  "name": "pnpm-workspaces-demo",
+  "dependencies": {
+  }
+}

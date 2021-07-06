@@ -1,0 +1,10 @@
+{
+  "private": "true",
+  "name": "yarn-workspaces-demo",
+  "workspaces": {
+    "packages": [
+      "/packages/*"
+    ]
+  },
+  "dependencies": {}
+}
