@@ -1,7 +1,7 @@
 # Notes
 
 > ⚠️ 请检查你的 yarn 版本，如果是 yarn2 的版本，你可以在控制台执行这条指令来切换版本： `yarn set version 1`
-> ⚠️ yarn1 的 bug 真多，吐血。官方已经不怎么维护了，建议换 yarn2
+> ⚠️ yarn1 的 bug 真多，吐血。官方已经不怎么维护了，建议换 yarn2 :)
 
 ## nohoist in workspaces
 
@@ -44,7 +44,7 @@ yarn add @test/bundler@file:packages/bundler # 在 yarn1 中安装子项目为�
 
 ### To the workspace
 
-⚠️ yarn1 不支持批量给子项目添加依赖，并且也不支持给子项目添加**本地子项目**为依赖。
+⚠️ yarn1 不支持批量给子项目添加依赖，并且也不支持给子项目添加**本地子项目**为依赖。（除非直接在 package.json 里写 file 协议版本的依赖）
 
 在 `hoist` 模式下，下面两种添加依赖的方式是一致的，都会将依赖统一收集到顶层管理。
 
