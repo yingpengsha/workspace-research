@@ -2,7 +2,7 @@
   "private": "true",
   "name": "npm-workspaces-demo",
   "workspaces": [
-    "/packages/*"
+    "./packages/*"
   ],
   "dependencies": {
   }

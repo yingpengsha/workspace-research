@@ -3,7 +3,7 @@
   "name": "yarn-workspaces-demo",
   "workspaces": {
     "packages": [
-      "/packages/*"
+      "./packages/*"
     ]
   },
   "dependencies": {},
