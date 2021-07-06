@@ -1,9 +1,6 @@
 {
-  "private": "true",
   "name": "yarn2-workspaces-demo",
   "workspaces": [
-    "/packages/*"
-  ],
-  "dependencies": {},
-  "version": "0.0.0"
+    "packages/*"
+  ]
 }
