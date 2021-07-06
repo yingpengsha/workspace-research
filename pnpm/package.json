@@ -1,6 +1,3 @@
 {
-  "private": "true",
-  "name": "pnpm-workspaces-demo",
-  "dependencies": {
-  }
+  "name": "pnpm-workspaces-demo"
 }
