@@ -1,5 +1,7 @@
 # Notes
 
+> ⚠️ `npm workspaces` 仍在不停的改动中，请注意你的 npm 版本，即便你是 v7.x 版本的 npm，也可能因为子版本过小而导致部分功能无法完成。
+
 ## Initialize
 
 将会在根项目的 `node_modules` 下生成所有 workspace 的软链接依赖。
