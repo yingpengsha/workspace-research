@@ -39,18 +39,19 @@ yarn install # 将会在根项目的 `node_modules` 下生成所有子项目的�
 
 ```bash
 yarn add express -W # 在根项目中执行，必须添加 `-W` 参数以强调确实是未根项目添加依赖，否则 yarn 会抛出错误以提醒开发者
-yarn add @test/bundler@file:packages/bundler # 在 yarn1 中安装子项目为依赖需要显式的使用 file 协议
+yarn add @test/bundler@1.0.0 # 给根项目添加本地依赖，第一次安装的时候需要加上版本号否则会出错
+yarn add @test/bundler@file:packages/bundler # 或者在 yarn1 中安装子项目为依赖需要显式的使用 file 协议
 ```
 
 ### To the workspace
 
-⚠️ yarn1 不支持批量给子项目添加依赖，并且也不支持给子项目添加**本地子项目**为依赖。（除非直接在 package.json 里写 file 协议版本的依赖）
+⚠️ yarn1 不支持批量给子项目添加依赖
 
 在 `hoist` 模式下，下面两种添加依赖的方式是一致的，都会将依赖统一收集到顶层管理。
 
 ```bash
-yarn workspace @test/bundler add express
-cd ./packages/package-name && yarn add express
+yarn workspace @test/bundler add express @test/bundler@1.0.0 # 第一次添加本地依赖需要加上版本号
+cd ./packages/package-name && yarn add express @test/bundler@1.0.0
 ```
 
 ## Refer
@@ -58,3 +59,4 @@ cd ./packages/package-name && yarn add express
 - [Workspaces | Yarn](https://classic.yarnpkg.com/en/docs/workspaces/)
 - [Workspaces in Yarn](https://classic.yarnpkg.com/blog/2017/08/02/introducing-workspaces/)
 - [nohoist in Workspaces | Yarn Blog](https://classic.yarnpkg.com/blog/2018/02/15/nohoist/)
+- [Cannot `yarn add` in workspace package if depending on a local package](https://github.com/yarnpkg/yarn/issues/3973)
